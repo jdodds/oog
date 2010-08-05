@@ -58,7 +58,7 @@ def find_headings(path_to_pdf):
             data.append([chap, []])
         elif section.search(line):
             sec = section.search(line).group(1)
-            data[-1][1].append(sec)
+            data[-1][1].append(' '.join(sec.split('-')[1:]))
 
     return data
 
